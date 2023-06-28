@@ -11,11 +11,11 @@ export const validate = (input) => {
   let isValid = input.validity.valid;
 
   let errorTextareaPattern = false;
-  const pattern = { minN: '10', maxN: '300' };
+  const textareaPattern = { minN: '10', maxN: '300' };
   if (input.type === 'textarea') {
     ({ isValid, errorTextareaPattern } = validateTAPattern({
       input,
-      pattern,
+      pattern: textareaPattern,
       validators: {
         errorTextareaPattern,
         isValid,
