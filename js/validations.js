@@ -31,7 +31,10 @@ export const validate = (input) => {
     validInputs[input.name] = false;
     input.parentElement.classList.add('invalid-input-group');
     input.parentElement.querySelector('.invalid-input-message').innerHTML =
-      getErrorMessage(input, { errorTextareaPattern, pattern });
+      getErrorMessage(input, {
+        errorTextareaPattern,
+        pattern: textareaPattern,
+      });
   }
 
   handleSubmitButton();
